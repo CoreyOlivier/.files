@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 call plug#end() 
+
 "=================================
 
 "Key Mapping
@@ -94,3 +95,8 @@ function! ToggleNumber()
 		set relativenumber
 	endif
 endfunc
+
+
+"=================================
+" Multicomputer settings
+source $HOME/.$HOST.vim
