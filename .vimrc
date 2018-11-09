@@ -6,7 +6,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'wesQ3/vim-windowswap'
 Plug 'vim-python/python-syntax'
 Plug 'jiangmiao/auto-pairs'
-Plug 'dracula/vim',{'as':'dracula'}
 Plug 'junegunn/fzf'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -16,6 +15,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+if !empty(glob("$HOME/.$HOST/plugins.vim"))
+  source $HOME/.$HOST/plugins.vim
+endif
 call plug#end() 
 
 "=================================
@@ -41,23 +43,6 @@ map <leader>s :source ~/.vimrc<CR>
 "==================================
 
 "Look
-set t_Co=256
-set number
-set softtabstop=2
-set expandtab
-set shiftwidth=2
-set tabstop=2
-set incsearch
-set hlsearch
-set hidden
-set splitbelow
-set splitright
-set cursorline
-syntax enable
-color dracula
-hi CursorLine gui=none
-hi CursorLine cterm=underline
-hi Normal guibg=NONE ctermbg=NONE
 
 "=================================
 
@@ -69,13 +54,6 @@ hi Normal guibg=NONE ctermbg=NONE
 " lightline
 set laststatus=2
 set noshowmode
-let g:lightline = {
-  \ 'colorscheme': 'Dracula',
-  \}
-let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
-let s:palette.inactive.middle = s:palette.normal.middle
-let s:palette.tabline.middle = s:palette.normal.middle
 " Emmet
 let g:user_emmet_leader_key=','
 "------------------
@@ -99,4 +77,4 @@ endfunc
 
 "=================================
 " Multicomputer settings
-source $HOME/.$HOST.vim
+source $HOME/.$HOST/local.vim
