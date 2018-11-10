@@ -15,8 +15,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-if !empty(glob("$HOME/.$HOST/plugins.vim"))
-  source $HOME/.$HOST/plugins.vim
+if !empty(glob("$HOME/.$HOST/plugins_vim"))
+  source $HOME/.$HOST/plugins_vim
 endif
 call plug#end() 
 
@@ -77,4 +77,4 @@ endfunc
 
 "=================================
 " Multicomputer settings
-source $HOME/.$HOST/local.vim
+source $HOME/.$HOST/local_vim

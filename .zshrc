@@ -8,7 +8,6 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="rkj-repos"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -67,6 +66,11 @@ plugins=(
   vi-like
 )
 
+#if [ -f $HOME/.$HOST/local_zsh ] 
+#  source $HOME/.$HOST/local_zsh
+#fi
+source $HOME/.$HOST/local_zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -102,6 +106,7 @@ alias svim="sudo -E vim"
 alias pyrun="python -i"
 alias plex="ssh pi@telemus"
 alias sftplex="sftp pi@telemus"
+alias zsource="source ~/.zshrc"
 #
 #
 #
