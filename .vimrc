@@ -43,6 +43,7 @@ map <leader>s :source ~/.vimrc<CR>
 "==================================
 
 "Look
+set number
 
 "=================================
 
@@ -77,4 +78,6 @@ endfunc
 
 "=================================
 " Multicomputer settings
-source $HOME/.$HOST/local_vim
+if !empty(glob("$HOME/.$HOST/local_vim"))
+  source $HOME/.$HOST/local_vim
+endif
