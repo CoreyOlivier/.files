@@ -107,6 +107,13 @@ alias pyrun="python -i"
 alias plex="ssh pi@telemus"
 alias sftplex="sftp pi@telemus"
 alias zsource="source ~/.zshrc"
+
+
+# Git Alias
+alias gits="git status"
+alias gita="git add"
+alias gitaa="git add ."
+alias gitcom="git commit -m"
 #
 #
 #
