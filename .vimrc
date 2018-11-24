@@ -39,6 +39,8 @@ nnoremap <leader>h, <C-w>-
 inoremap jk <Esc>
 vnoremap <leader><leader> <Esc> 
 map <leader>s :source ~/.vimrc<CR>
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
 
 "==================================
 
@@ -59,6 +61,7 @@ set noshowmode
 let g:user_emmet_leader_key=','
 "------------------
 "Ale
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 

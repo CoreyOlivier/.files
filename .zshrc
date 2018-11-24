@@ -107,6 +107,7 @@ alias pyrun="python -i"
 alias plex="ssh pi@telemus"
 alias sftplex="sftp pi@telemus"
 alias zsource="source ~/.zshrc"
+alias ipython="python -i"
 
 
 # Git Alias
