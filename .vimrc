@@ -41,7 +41,8 @@ vnoremap <leader><leader> <Esc>
 map <leader>s :source ~/.vimrc<CR>
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
-
+vnoremap <leader>y "+y
+vnoremap <leader>p "+p
 "==================================
 
 "Look

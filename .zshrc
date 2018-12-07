@@ -103,11 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias svim="sudo -E vim"
-alias pyrun="python -i"
 alias plex="ssh pi@telemus"
 alias sftplex="sftp pi@telemus"
 alias zsource="source ~/.zshrc"
-alias ipython="python -i"
+alias ipy="python -i"
 
 
 # Git Alias
