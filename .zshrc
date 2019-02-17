@@ -107,6 +107,9 @@ alias plex="ssh pi@telemus"
 alias sftplex="sftp pi@telemus"
 alias zsource="source ~/.zshrc"
 alias ipy="python -i"
+alias pyshell="pipenv shell"
+alias fshell="flask shell"
+alias frun="flask run"
 
 
 # Git Alias
