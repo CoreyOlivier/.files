@@ -63,7 +63,6 @@
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  vi-like
 )
 
 #if [ -f $HOME/.$HOST/local_zsh ] 
