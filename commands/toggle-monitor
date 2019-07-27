@@ -1,0 +1,56 @@
+#! /usr/bin/env python3
+import subprocess
+
+
+def main():
+    string_output = get_xrandr_out()
+    should_disable_monitor = monitor_is_enabled(string_output)
+
+    if should_disable_monitor:
+        diable_monitor()
+    else:
+        enable_monitor()
+
+
+def get_xrandr_out():
+    cmd = 'xrandr --prop'
+    xrandr_output = subprocess.run(cmd, capture_output=True, shell=True)
+
+    if xrandr_output.returncode != 0:
+        raise Exception('command ' + cmd + ' failed')
+    byte_output = xrandr_output.stdout
+    string_output = str(byte_output)
+
+    return string_output
+
+
+def monitor_is_enabled(string_output):
+    try:
+        print(string_output)
+        lines = string_output.split('\\n')
+        test_line = [x for x in lines if 'HDMI-0' in x][0]
+        is_monitor_on = '1920x1080+0+0' in test_line
+
+        return is_monitor_on
+    except:
+        raise Exception('No HDMI outputs found.')
+
+
+def diable_monitor():
+    try:
+        cmd = 'xrandr --output HDMI-0 --off'
+        subprocess.run(cmd, shell=True)
+    except:
+        raise Exception('Monitor Cannot be disabled.')
+
+
+def enable_monitor():
+    try:
+        cmd = 'xrandr --output DVI-I-1 --auto --pos 1920x900 --output HDMI-0 --auto --pos 0x0'
+        subprocess.run(cmd, shell=True)
+    except:
+        raise Exception('Monitor Cannot be enabled.')
+
+
+if __name__ == "__main__":
+    main()

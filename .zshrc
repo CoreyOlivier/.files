@@ -120,3 +120,4 @@ alias gitcom="git commit -m"
 #
 #
 export PATH=~/.npm-global/bin:$PATH
+export PATH=~/Documents/.files/commands:$PATH
