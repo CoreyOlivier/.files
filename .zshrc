@@ -109,6 +109,8 @@ alias ipy="python -i"
 alias pyshell="pipenv shell"
 alias fshell="flask shell"
 alias frun="flask run"
+alias djmanage="python manage.py"
+alias :q="exit"
 
 
 # Git Alias

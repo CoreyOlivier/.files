@@ -32,7 +32,7 @@ def monitor_is_enabled(string_output):
         is_monitor_on = '1920x1080+0+0' in test_line
 
         return is_monitor_on
-    except:
+    except Exception:
         raise Exception('No HDMI outputs found.')
 
 
@@ -40,15 +40,15 @@ def diable_monitor():
     try:
         cmd = 'xrandr --output HDMI-0 --off'
         subprocess.run(cmd, shell=True)
-    except:
+    except Exception:
         raise Exception('Monitor Cannot be disabled.')
 
 
 def enable_monitor():
     try:
-        cmd = 'xrandr --output DVI-I-1 --auto --pos 1920x900 --output HDMI-0 --auto --pos 0x0'
+        cmd = 'xrandr  --output HDMI-0 --auto --pos 0x0 --output DVI-I-1 --auto --pos 1920x900 --primary'
         subprocess.run(cmd, shell=True)
-    except:
+    except Exception:
         raise Exception('Monitor Cannot be enabled.')
 
 
